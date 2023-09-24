@@ -14,7 +14,7 @@ class CodeInterpreter:
                 content=uploaded_file.read()
             )
             files.append(file)
-        async with CodeInterpreterSession(model='gpt-4') as session:
+        async with CodeInterpreterSession(model='gpt-3.5-turbo-0613') as session:
             response = await session.generate_response(
                 prompt,
                 files=files,
